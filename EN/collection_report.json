@@ -1,0 +1,27 @@
+{
+ "target": 477,
+ "candidates": 2517,
+ "dropped": {
+  "former_defunct": 570,
+  "state_multistate_or_conflict": 215,
+  "desc_lt_100": 39,
+  "state_lead_mismatch": 19,
+  "census_nomatch": 9,
+  "empty_desc": 3
+ },
+ "counts": {
+  "pool": 1662,
+  "pool_festival": 321,
+  "pool_attraction": 1341,
+  "pool_ca": 208,
+  "census_plus_article": 1515,
+  "census_only": 147,
+  "selected": 477,
+  "sel_festival": 296,
+  "sel_attraction": 181,
+  "sel_ca": 156,
+  "sel_census_only": 0,
+  "shortfall": 0
+ },
+ "census_only_examples": []
+}

@@ -1,0 +1,17 @@
+{
+ "rows": 477,
+ "unique_qid": 477,
+ "empty_name_ko": 0,
+ "empty_desc_ko": 8,
+ "cr_count": 0,
+ "embed_text_max_chars": 1507,
+ "article_url_kowiki": 477,
+ "source_csv_sha256": "467f0471dd549be29efa9e35447a968bd05d4266881aa985a4fe3d6e20baf3e1",
+ "selection": "전량 477행 — data/bilingual_spots.csv의 KO 필드(id·qid·name_ko·desc_ko·sido·category) + embed_text_ko(name+desc·≤4000자) + ko Wikipedia article_url(Wikidata sitelink 해석)",
+ "file_bytes": 563242,
+ "file_sha256": "947dff0a35a8e705199ec7583ccc1006903ecaec49e03b944f037f03270af397",
+ "embed_rule": "per-field CR strip + ((name or \"\")+\" \"+(desc or \"\")).strip()[:4000] — 내부 연속 공백 collapse 없음(verify_mac_split.py 규칙)",
+ "embed_rule_mismatch": 0,
+ "embed_double_space_rows": 26,
+ "article_url_note": "attribution용 현재 kowiki sitelink — 원본 수집 revision 불명, oldid 주장 안 함"
+}
