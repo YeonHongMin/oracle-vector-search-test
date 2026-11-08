@@ -1,0 +1,13 @@
+-- HNSW: 그래프 탐색 후보 큐의 크기를 직접 지정한다
+SELECT chunk_id, chunk_data
+FROM   doc_chunks
+ORDER  BY VECTOR_DISTANCE(chunk_embedding, :qv, COSINE)
+FETCH  APPROXIMATE FIRST 10 ROWS ONLY
+WITH TARGET ACCURACY PARAMETERS (EFSEARCH 500);
+
+-- IVF: 이번 탐색에서 열어 볼 군집 파티션 수를 직접 지정한다
+SELECT chunk_id, chunk_data
+FROM   doc_chunks
+ORDER  BY VECTOR_DISTANCE(chunk_embedding, :qv, COSINE)
+FETCH  APPROXIMATE FIRST 10 ROWS ONLY
+WITH TARGET ACCURACY PARAMETERS (NEIGHBOR PARTITION PROBES 10);
