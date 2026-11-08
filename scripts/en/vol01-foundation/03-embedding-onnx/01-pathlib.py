@@ -2,7 +2,7 @@ from pathlib import Path
 import zipfile
 from oml.utils import ONNXPipeline, ONNXPipelineConfig
 
-ROOT = Path.home / "onnx_poc"; OUT = ROOT / "kure_v1"; CACHE = ROOT / "cache" / "hf"
+ROOT = Path.home() / "onnx_poc"; OUT = ROOT / "kure_v1"; CACHE = ROOT / "cache" / "hf"
 OUT.mkdir(parents=True, exist_ok=True)
 config = ONNXPipelineConfig.from_template(
     "text", max_seq_length=8192, distance_metrics=["COSINE"], use_external_data=True)

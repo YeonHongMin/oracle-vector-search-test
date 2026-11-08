@@ -18,4 +18,4 @@ def fetch(pk: str):
 
 def clean(v) -> str:
     s = "" if v is None else str(v)
-    return " ".join(s.replace("\r", " ").replace("\n", " ").split)
+    return " ".join(s.replace("\r", " ").replace("\n", " ").split())

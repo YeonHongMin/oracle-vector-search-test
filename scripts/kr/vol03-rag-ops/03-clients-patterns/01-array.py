@@ -7,7 +7,7 @@ with oracledb.connect(
     password=os.environ["ORACLE_PASSWORD"],
     dsn=os.environ["ORACLE_DSN"]
 ) as conn:
-    with conn.cursor as cur:
+    with conn.cursor() as cur:
         q_vec = array.array("f", [1.0, 0.0, 0.0])
         cur.execute(
             """
