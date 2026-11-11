@@ -5,7 +5,7 @@
   IF c_kw IS NOT NULL THEN
     SELECT h.COLUMN_VALUE BULK COLLECT INTO k_ids
       FROM TABLE(poc_kwa(c_kw, p_cand, c_pfx)) h;
-    -- sido 하드필터는 후처리: 후보 id의 PK 조회로 지역이 아닌 것을 제외한다(순위 보존)
+    -- sido 하드 필터는 후처리: 후보 id의 PK 조회로 지역이 아닌 것을 제외한다(순위 보존)
     IF p_sido IS NOT NULL THEN
       DECLARE
         kept SYS.ODCINUMBERLIST := SYS.ODCINUMBERLIST;

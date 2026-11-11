@@ -9,5 +9,5 @@ config = ONNXPipelineConfig.from_template(
 ONNXPipeline("nlpai-lab/KURE-v1", config,
              settings={"cache_dir": str(CACHE)}).export2file("kure_v1", output_dir=str(OUT))
 z = OUT / "kure_v1.zip"
-if z.is_file:
+if z.is_file():
     zipfile.ZipFile(z).extractall(OUT)
